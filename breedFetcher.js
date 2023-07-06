@@ -11,10 +11,14 @@ request(baseURL + queryParam, (err, response, body) => {
   if (err) {
     const status = `RESPONSE: ${response.statusCode}`;
     const message = err.message;
-    console.log(`${status} ${message}`);
+    return console.log(`${status} ${message}`);
   }
-  const result = `\n${JSON.parse(body)[0].description}\n`;
 
+  if (!Object.keys(JSON.parse(body)).length) {
+    return console.log('Your query does not match any existing breeds');
+  }
+
+  const result = `\n${JSON.parse(body)[0].description}\n`;
   console.log(result);
 });
-
+;
