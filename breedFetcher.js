@@ -17,7 +17,7 @@ const fetchBreedDescription = (breedName, callback) => {
     }
 
     if (!Object.keys(JSON.parse(body)).length) {
-      return console.log('Your query does not match any existing breeds');
+      return callback('Your query does not match any existing breeds');
     }
 
     const result = `\n${JSON.parse(body)[0].description}\n`;
