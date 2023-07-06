@@ -5,7 +5,7 @@
   "main": "breedFetcher.js",
   "scripts": {
     "test": "mocha",
-    "test-watch": "mocha --watch"
+    "watch": "mocha --watch"
   },
   "repository": {
     "type": "git",
