@@ -1,12 +1,6 @@
 const request = require("request");
 const { baseURL } = require("./constants");
 
-const input = process.argv;
-if (input.length < 3) throw new Error("ERROR: Not enough args");
-if (input.length > 3) throw new Error("ERROR: Too many args");
-
-const queryParam = input[2].toLowerCase();
-
 const fetchBreedDescription = (breedName, callback) => {
 
   request(baseURL + breedName, (err, response, body) => {
