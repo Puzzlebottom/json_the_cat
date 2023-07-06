@@ -18,9 +18,11 @@
     "url": "https://github.com/Puzzlebottom/json_the_cat/issues"
   },
   "homepage": "https://github.com/Puzzlebottom/json_the_cat#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  },
   "devDependencies": {
     "chai": "^4.3.7",
-    "mocha": "^10.2.0",
-    "request": "^2.88.2"
+    "mocha": "^10.2.0"
   }
 }
